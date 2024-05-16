@@ -10,6 +10,13 @@ export const Route = createFileRoute('/_layout1/products')({
 
 function Products() {
 
+    // const [trigger, result, lastPromiseInfo] = api.useLazyGetUserProfileQuery()
+
+    // const getData = async () => {
+    //     const { data, isLoading, isError, error } = await trigger({userId:userId});
+    //     console.log(data)
+    // }
+
   const { data, isFetching } = useGetProductsQuery("")
 
   if (isFetching) return (<div className='absolute top-0 z-[100] w-full h-screen bg-black text-5xl text-white flex items-center justify-center '>Fetching Data...</div>)
